@@ -34,7 +34,7 @@ function AboutSection() {
             <Link
               // to={`${window.location.origin}/public/CV_ULIL ABSOR.pdf`}
               to={
-                "https://drive.google.com/file/d/1yYNcD3p3TeEX9PLfB0o-1b9iyTEVFt9W/view?usp=drivesdk"
+                "https://drive.google.com/file/d/1eotRupdblF-YqNLF4Hl9TWuNV8-p3SSX/view?usp=drivesdk"
               }
               className={badgeVariants({ variant: "outline" })}
               rel="noopener noreferrer"
