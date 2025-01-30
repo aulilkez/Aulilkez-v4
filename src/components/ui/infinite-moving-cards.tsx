@@ -8,6 +8,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "./tooltip";
+import { ImageSkillsType } from "@/types";
 
 export const InfiniteMovingCards = ({
   items,
@@ -16,7 +17,7 @@ export const InfiniteMovingCards = ({
   // pauseOnHover = true,
   className,
 }: {
-  items: string[];
+  items: ImageSkillsType[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -86,23 +87,22 @@ export const InfiniteMovingCards = ({
           start && "animate-scroll ",
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item: ImageSkillsType, idx: number) => (
           <li
             className="w-fit max-w-full relative rounded-2xl flex-shrink-0"
             key={`item-${idx}`}
           >
-            {" "}
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
                   <img
-                    src={item}
+                    src={item.image}
                     alt="Bank Icon"
                     className="w-fit h-16 md:h-20 space-x-2 rounded-md pointer-events-none"
                   />
-                </TooltipTrigger>{" "}
+                </TooltipTrigger>
                 <TooltipContent>
-                  <p>Add to library</p>{" "}
+                  <p>{item.title}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>

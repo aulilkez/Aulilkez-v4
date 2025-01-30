@@ -13,3 +13,8 @@ export interface SEOProps {
   image?: string; // Gambar untuk sosial media
   url?: string; // URL halaman
 }
+
+export interface ImageSkillsType {
+  image: string;
+  title: string;
+}
