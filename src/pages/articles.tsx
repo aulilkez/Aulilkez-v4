@@ -1,4 +1,4 @@
-import { BoxArticle } from "@/components/block/box-article";
+import { BlockArticle } from "@/components/block/block-article";
 import { BoxSuper } from "@/components/block/box-super";
 import MainLayout from "@/components/layouts/main-layout";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -73,7 +73,7 @@ function ArticlesPage() {
         <BoxSuper title="Articles" icon={Newspaper}>
           <ul className="grid mt-7 grid-cols-1 xl:grid-cols-3 gap-y-3 gap-x-6 items-start px-2.5">
             {Array.from({ length: 10 }).map((_, idx: number) => (
-              <BoxArticle key={idx} />
+              <BlockArticle key={idx} as="li" />
             ))}
           </ul>
         </BoxSuper>

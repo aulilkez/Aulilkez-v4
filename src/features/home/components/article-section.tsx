@@ -1,4 +1,4 @@
-import { BoxArticle } from "@/components/block/box-article";
+import { BlockArticle } from "@/components/block/block-article";
 import { BoxSuper } from "@/components/block/box-super";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Newspaper } from "lucide-react";
@@ -56,12 +56,7 @@ function ArticlesSection() {
       >
         <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-7 gap-x-6 items-start px-2.5 mt-7">
           {articles.map((article, idx: number) => (
-            <BoxArticle
-              key={idx}
-              title={article.title}
-              desc={article.body}
-              slug={article.title}
-            />
+            <BlockArticle as="li" item={article} key={idx} />
           ))}
         </ul>
 

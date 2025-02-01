@@ -18,3 +18,16 @@ export interface ImageSkillsType {
   image: string;
   title: string;
 }
+
+export interface BlockArticleType {
+  id?: number
+  url?: string;
+  slug?: string;
+  alt?: string;
+  valueDecrease?: string;
+  valueIncrease?: string;
+  desc?: string;
+  title?: string;
+  date?: string;
+  author?: string;
+}
