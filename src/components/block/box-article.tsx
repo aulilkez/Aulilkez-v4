@@ -54,7 +54,7 @@ export const BoxArticle = ({
           </p>
         </div>
       </div>
-      <div className="relative group">
+      <div className="relative group w-full">
         <BoxStars className="hidden group-hover:block group-hover:transition-all ease-linear duration-500" />
         <Badge className="absolute top-3 right-3">
           {date || "12 January 2024"}
@@ -62,7 +62,7 @@ export const BoxArticle = ({
         <img
           src={url || "https://placehold.co/1400"}
           alt={alt || "Placeholder image"}
-          className="aspect-video border-2 rounded-xl md:max-w-sm"
+          className="border-2 rounded-xl h-56 w-full"
         />
         <div className="absolute bottom-3 flex w-full justify-between px-4 items-center">
           <Link
